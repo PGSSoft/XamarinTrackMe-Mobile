@@ -3,6 +3,7 @@ using Windows.Devices.Geolocation;
 using Windows.Networking.Connectivity;
 using MvvmCross.Platform.Core;
 using TrackMe.Core.Services.Interfaces;
+using TrackMe.WinPhoneUniversalNative.Helpers;
 
 namespace TrackMe.WinPhoneUniversalNative.Services
 {
@@ -59,21 +60,5 @@ namespace TrackMe.WinPhoneUniversalNative.Services
         }
     }
 
-    public static class PhoneExtensions // TODO: shared library?
-    {
-        public static LocationStatus ToLocationStatus(this PositionStatus status)
-        {
-            switch (status)
-            {
-                case PositionStatus.Disabled | PositionStatus.NotAvailable | PositionStatus.NoData | PositionStatus.NotInitialized:
-                    return LocationStatus.Stopped;
-                case PositionStatus.Ready:
-                    return LocationStatus.Started;
-                case PositionStatus.Initializing:
-                    return LocationStatus.Initializing;
-                default:
-                    return LocationStatus.Stopped;
-            }
-        }
-    }
+    
 }

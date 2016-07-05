@@ -100,10 +100,17 @@
     <Compile Include="Bootstrap\MessengerPluginBootstrap.cs" />
     <Compile Include="Constants.cs" />
     <Compile Include="Controls\UserPosition.cs" />
+    <Compile Include="Converters\BooleanConverterGeneric.cs" />
+    <Compile Include="Converters\BooleanToVisibilityConverter.cs" />
+    <Compile Include="Converters\GpsStatusToImageConverter.cs" />
     <Compile Include="Converters\InternetStatusToImageFormsConverter.cs" />
+    <Compile Include="Converters\InvertBooleanToVisibilityConverter.cs" />
+    <Compile Include="Converters\InvertNullToBoolConverter.cs" />
+    <Compile Include="Converters\NullToBoolConverter.cs" />
     <Compile Include="Converters\NulOrEmptyToVisibilityConverter.cs" />
     <Compile Include="Converters\PositionToGeoPointConverter.cs" />
     <Compile Include="Converters\StringFormatConverter.cs" />
+    <Compile Include="Converters\TimeSpanToOpacityConverter.cs" />
     <Compile Include="Services\Notifer.cs" />
     <Compile Include="Services\ILocationTrackerService.cs" />
     <Compile Include="Services\LocationTrackerService.cs" />
