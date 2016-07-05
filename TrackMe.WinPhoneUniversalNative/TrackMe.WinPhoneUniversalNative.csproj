@@ -100,9 +100,17 @@
     <Compile Include="Bootstrap\MessengerPluginBootstrap.cs" />
     <Compile Include="Constants.cs" />
     <Compile Include="Controls\UserPosition.cs" />
+    <Compile Include="Converters\BooleanConverterGeneric.cs" />
+    <Compile Include="Converters\BooleanToVisibilityConverter.cs" />
+    <Compile Include="Converters\GpsStatusToImageConverter.cs" />
+    <Compile Include="Converters\InternetStatusToImageFormsConverter.cs" />
+    <Compile Include="Converters\InvertBooleanToVisibilityConverter.cs" />
+    <Compile Include="Converters\InvertNullToBoolConverter.cs" />
+    <Compile Include="Converters\NullToBoolConverter.cs" />
     <Compile Include="Converters\NulOrEmptyToVisibilityConverter.cs" />
     <Compile Include="Converters\PositionToGeoPointConverter.cs" />
     <Compile Include="Converters\StringFormatConverter.cs" />
+    <Compile Include="Converters\TimeSpanToOpacityConverter.cs" />
     <Compile Include="Services\Notifer.cs" />
     <Compile Include="Services\ILocationTrackerService.cs" />
     <Compile Include="Services\LocationTrackerService.cs" />
@@ -118,9 +126,6 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Setup.cs" />
-    <Compile Include="Views\TestPage.xaml.cs">
-      <DependentUpon>TestPage.xaml</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -135,6 +140,8 @@
     <Content Include="Assets\logo_black_TrackMyLocation.png" />
     <Content Include="Assets\logo_TrackMyLocation.png" />
     <Content Include="Assets\me_icon.png" />
+    <Content Include="Assets\wifi_off.png" />
+    <Content Include="Assets\wifi_on.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -155,10 +162,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\HomePage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\TestPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

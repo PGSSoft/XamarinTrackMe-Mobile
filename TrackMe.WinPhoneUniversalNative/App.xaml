@@ -39,6 +39,7 @@
             <converters:GpsStatusToImageConverter x:Key="GpsStatusToImageConverter" />
             <converters:StringFormatConverter x:Key="StringFormatConverter" />
             <converters:InvertNullToBoolConverter x:Key="InvertNullToBoolConverter" />
+            <converters:InternetStatusToImageFormsConverter x:Key="InternetStatusToImageFormsConverter" />
         </ResourceDictionary>
     </Application.Resources>
 </Application>
