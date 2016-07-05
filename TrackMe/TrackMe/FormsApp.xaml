@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:converters="clr-namespace:TrackMe.Infrastructure.Converters;assembly=TrackMe"
+             xmlns:views="clr-namespace:TrackMe.Views;assembly=TrackMe"
+             x:Class="TrackMe.FormsApp">
+  <Application.Resources>
+    <ResourceDictionary>
+      <converters:InvertBoolConverter x:Key="InvertBoolConverter"/>
+      <converters:GpsStatusToColorConverter x:Key="GpsStatusToColorConverter"/>
+      <converters:InternetStatusToColorConverter x:Key="InternetStatusToColorConverter"/>
+      <converters:GpsStatusToImageFormsConverter x:Key="GpsStatusToImageFormsConverter"/>
+      <converters:InternetStatusToImageFormsConverter x:Key="InternetStatusToImageFormsConverter" /> 
+      <converters:NotStringEmptyOrNullConverter x:Key="NotStringEmptyOrNullConverter"/>
+      <Color x:Key="PrimaryColor">#FF5722</Color>
+      <Color x:Key="DisabledColor">#A8A8A8</Color>
+      <Color x:Key="BackgroundColor">
+        <OnPlatform x:TypeArguments="Color" WinPhone="Black"></OnPlatform>
+      </Color>
+      <Color x:Key="TextColor">
+        <OnPlatform x:TypeArguments="Color" WinPhone="#212121"></OnPlatform>
+      </Color>
+      <Style TargetType="Button">
+        <Setter Property="TextColor" Value="White"></Setter>
+        <Style.Triggers>
+          <Trigger TargetType="Button" Property="IsEnabled" Value="False">
+            <Setter Property="BackgroundColor" Value="{StaticResource DisabledColor}"></Setter>
+            <Setter Property="BorderColor" Value="{StaticResource DisabledColor}"></Setter>
+          </Trigger>
+          <Trigger TargetType="Button" Property="IsEnabled" Value="True">
+            <Setter Property="BorderColor" Value="{StaticResource PrimaryColor}"></Setter>
+            <Setter Property="BackgroundColor" Value="{StaticResource PrimaryColor}"></Setter>
+          </Trigger>
+        </Style.Triggers>
+      </Style>
+      <Style TargetType="Label">
+        <Setter Property="TextColor" Value="{StaticResource TextColor}"></Setter>
+      </Style>
+      
+      <Color x:Key="StatusStoppedColor">#ce2323</Color>
+      <Color x:Key="StatusInitializingColor">Yellow</Color>
+      <Color x:Key="StatusStartedColor">#00a561</Color>
+      
+      <views:BackgroundDebugColors x:Key="DebugColors" IsEnabled="False"/>
+    </ResourceDictionary>
+  </Application.Resources>
+</Application>

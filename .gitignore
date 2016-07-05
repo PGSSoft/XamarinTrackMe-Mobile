@@ -1,0 +1,16 @@
+TrackMe.Core/obj/
+TrackMe.Test/bin/Debug/
+TrackMe.WinPhone.Common/Bin/
+TrackMe.Core/bin/
+TrackMe.Test/obj/
+TrackMe.WinPhoneNative/Bin/
+TrackMe.WinPhoneNative/obj/
+TrackMe.WinPhoneUniversalNative/bin/
+TrackMe.WinPhoneUniversalNative/obj/
+TrackMe/TrackMe.Droid/bin/
+TrackMe/TrackMe.Droid/obj/
+TrackMe/TrackMe.iOS/obj/
+TrackMe/TrackMe/bin/
+packages/
+TrackMe/TrackMe/obj/
+.vs/TrackMe/v14/.suo

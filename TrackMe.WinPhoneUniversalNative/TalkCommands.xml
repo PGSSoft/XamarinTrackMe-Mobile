@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<VoiceCommands xmlns="http://schemas.microsoft.com/voicecommands/1.2">
+  <CommandSet xml:lang="en-us">
+    <AppName>Track My Location</AppName>
+    <Example>share my location</Example>
+
+    <Command Name="ShareLocation">
+      <Example> share my location? </Example>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase">
+        share my location?
+      </ListenFor>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase">
+        track my location?
+      </ListenFor>
+      <Feedback>Sharing will start soon.</Feedback>
+      <Navigate/>
+    </Command>
+  </CommandSet>
+</VoiceCommands>
