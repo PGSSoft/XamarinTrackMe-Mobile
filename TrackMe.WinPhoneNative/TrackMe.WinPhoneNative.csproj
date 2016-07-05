@@ -128,6 +128,8 @@
     <Compile Include="Bootstrap\LocationPluginBootstrap.cs" />
     <Compile Include="Bootstrap\MessengerPluginBootstrap.cs" />
     <Compile Include="Helpers\Converters\CombiningConverter.cs" />
+    <Compile Include="Helpers\Converters\InternetStatusToColorConverter.cs" />
+    <Compile Include="Helpers\Converters\InternetStatusToImageFormsConverter.cs" />
     <Compile Include="Helpers\Converters\NullToBoolConverter.cs" />
     <Compile Include="Helpers\FASSupport.cs" />
     <Compile Include="Helpers\Converters\BooleanToVisibilityConverter.cs" />
@@ -207,6 +209,12 @@
     <Content Include="Assets\Tiles\Tile_Large-691x336.png" />
     <Content Include="Assets\Tiles\Tile_Medium-336x336.png" />
     <Content Include="Assets\Tiles\tile_small-159x159.png" />
+    <Content Include="Assets\wifi_off.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\wifi_on.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Toolkit.Content\ApplicationBar.Add.png" />
     <Content Include="Toolkit.Content\ApplicationBar.Cancel.png" />
     <Content Include="Toolkit.Content\ApplicationBar.Check.png" />
@@ -220,8 +228,9 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="InTheHand.UI.Xaml.Controls.ProgressRing">
+    <Reference Include="InTheHand.UI.Xaml.Controls.ProgressRing, Version=8.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\InTheHand.UI.Xaml.Controls.ProgressRing.8.2014.10.5\lib\wp8\InTheHand.UI.Xaml.Controls.ProgressRing.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.Phone.Controls.Toolkit, Version=8.0.1.0, Culture=neutral, PublicKeyToken=b772ad94eb9ca604, processorArchitecture=MSIL">
       <HintPath>..\packages\WPtoolkit.4.2013.08.16\lib\wp8\Microsoft.Phone.Controls.Toolkit.dll</HintPath>

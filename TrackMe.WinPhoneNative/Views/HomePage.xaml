@@ -32,6 +32,8 @@
             <Image Grid.Column="0" x:Name="LogoDarkTheme" Visibility="Collapsed" Source="../Assets/logo_TrackMyLocation.png"></Image>
             <Image Grid.Column="0" x:Name="LogoLightTheme" Visibility="Collapsed"  Source="../Assets/logo_black_TrackMyLocation.png"></Image>
             <StackPanel Grid.Column="1"  Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,15,0">
+                <TextBlock VerticalAlignment="Center" >WiFi</TextBlock>
+                <Image Margin="0,0,0,0" Source="{Binding IsInternetEnabled, Converter={StaticResource InternetStatusToImageFormsConverter}}" Height="50" Width="50"></Image>
                 <TextBlock VerticalAlignment="Center" >GPS</TextBlock>
                 <Image Margin="0,0,0,0" Source="{Binding GpsStatus, Converter={StaticResource GpsStatusToImageConverter}}" Height="50" Width="50"></Image>
             </StackPanel>

@@ -22,7 +22,7 @@ namespace TrackMe.Core.Services
                     client.BaseAddress = new Uri(Constants.BaseUrl);
 
                     var parameters = new Dictionary<string, string>
-                    {
+                    { 
                         ["token"] = token,
                         ["latitude"] = position.Latitude.ToString(CultureInfo.InvariantCulture),
                         ["longitude"] = position.Longitude.ToString(CultureInfo.InvariantCulture),
@@ -33,7 +33,7 @@ namespace TrackMe.Core.Services
                     var response =
                         await client.PostAsync(Constants.SendPositionSubUrl, new FormUrlEncodedContent(parameters));
 
-                    return response.IsSuccessStatusCode
+                      return response.IsSuccessStatusCode
                         ? WebResult.Success()
                         : WebResult.Error($"Error: {response.StatusCode}");
                 }
@@ -73,7 +73,7 @@ namespace TrackMe.Core.Services
             }
         }
 
-        public async Task<WebResult> StopSession(string privateToken)
+        public async Task<WebResult> StopSession(string privateToken) 
         {
             try
             {

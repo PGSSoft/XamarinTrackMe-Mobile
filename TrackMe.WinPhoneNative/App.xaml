@@ -18,6 +18,8 @@
         <converters:StringEmptyOrNullConverter x:Key="StringEmptyOrNullConverter"/>
         <converters:GpsStatusToBrushConverter x:Key="GpsStatusToBrushConverter"/>
         <converters:GpsStatusToImageConverter x:Key="GpsStatusToImageConverter"/>
+        <!--<converters:InternetStatusToColorConverter x:Key="InternetStatusToColorConverter"/>-->
+        <converters:InternetStatusToImageFormsConverter x:Key="InternetStatusToImageFormsConverter"/>
         <converters:NullOrEmptyToVisibilityConverter x:Key="NullOrEmptyToVisibilityConverter"/>
         <converters:TimeSpanToOpacityConverter x:Key="TimeSpanToOpacityConverter" OpacityIfZero="0.4" OpacityGreaterThanZero="1"/>
         <converters:InvertNullToBoolConverter x:Key="InvertNullToBoolConverter"/>
