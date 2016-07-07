@@ -44,6 +44,7 @@ namespace TrackMe.iOS
         {
             Forms.Init();
             FormsMaps.Init();
+            
             var xamarinFormsApp = new FormsApp();
 
             return new MvxFormsTouchPagePresenter(Window, xamarinFormsApp);

@@ -37,8 +37,10 @@ namespace TrackMe.iOS
 
         public void Include(UILabel label)
         {
+          
             label.Text = label.Text + "";
             label.AttributedText = new NSAttributedString(label.AttributedText.ToString() + "");
+            label.AdjustsFontSizeToFitWidth = true;
         }
 
         public void Include(UIImageView imageView)
