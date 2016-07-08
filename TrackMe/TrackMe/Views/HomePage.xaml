@@ -55,7 +55,7 @@
       <Grid Grid.Row="2">
         <StackLayout Orientation="Horizontal">
           <Button Text="{Binding StopSharing}" Command="{Binding StopTrackingCommand}" HorizontalOptions="FillAndExpand" VerticalOptions="Center"
-                  IsVisible="{Binding IsTracking}"></Button>
+                  IsVisible="{Binding IsTracking}" IsEnabled="{Binding isTracking}"></Button>
           <ActivityIndicator IsVisible="{Binding IsBusy}"  IsRunning="{Binding IsBusy}" Color="{StaticResource PrimaryColor}" IsEnabled="{Binding IsBusy}"  />
           <Button Text="{Binding ShareString}" IsEnabled="{Binding ConnectionsStatus}" Command="{Binding ShareCommand}" Clicked="Button_OnClicked" HorizontalOptions="FillAndExpand" VerticalOptions="Center"/>
         </StackLayout>
