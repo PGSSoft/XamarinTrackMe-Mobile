@@ -111,6 +111,7 @@
     <Compile Include="AppDelegate.cs" />
     <Compile Include="MvxFormsTouchPagePresenter.cs" />
     <Compile Include="Renderers\ExtendedMapRenderer.cs" />
+    <Compile Include="Services\LocationTrackerService.cs" />
     <Compile Include="Services\Settings.cs" />
     <Compile Include="Services\DeviceService.cs" />
     <Compile Include="Services\ShareService.cs" />
@@ -199,6 +200,14 @@
     </Reference>
     <Reference Include="Plugin.Settings.Abstractions, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Xam.Plugins.Settings.2.1.0\lib\Xamarin.iOS10\Plugin.Settings.Abstractions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Reachability.Net, Version=1.0.5598.30650, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Reachability.Net.0.0.1\lib\Xamarin.iOS10\Reachability.Net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Reachability.Net.XamarinIOS, Version=1.0.5598.30667, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Reachability.Net.0.0.1\lib\Xamarin.iOS10\Reachability.Net.XamarinIOS.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />

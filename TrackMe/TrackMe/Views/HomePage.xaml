@@ -38,9 +38,9 @@
         </Grid.ColumnDefinitions>
         <Image Grid.Column="0" x:Name="image" Source="logo_TrackMyLocation.png" HorizontalOptions="Start"/>
           <StackLayout Grid.Column="1" Padding="2" Orientation="Horizontal" HorizontalOptions="End">
-            <Label Text="NET" FontSize="12" VerticalOptions="Center" TextColor="{Binding IsInternetEnabled, Converter={StaticResource InternetStatusToColorConverter}}"  />
+            <Label Text="NET" FontSize="9" VerticalOptions="Center" TextColor="{Binding IsInternetEnabled, Converter={StaticResource InternetStatusToColorConverter}}"  />
             <Image HeightRequest="25" WidthRequest="25" VerticalOptions="Center" HorizontalOptions="Center" Source="{Binding IsInternetEnabled, Converter={StaticResource InternetStatusToImageFormsConverter}}"/>
-            <Label Text="GPS" FontSize="12" VerticalOptions="Center" TextColor="{Binding GpsStatus, Converter={StaticResource GpsStatusToColorConverter}}"  />
+            <Label Text="GPS" FontSize="9" VerticalOptions="Center" TextColor="{Binding GpsStatus, Converter={StaticResource GpsStatusToColorConverter}}"  />
             <Image HeightRequest="30" WidthRequest="30" VerticalOptions="Center" Source="{Binding GpsStatus, Converter={StaticResource GpsStatusToImageFormsConverter}}"/>
           </StackLayout>
         </Grid>

@@ -71,6 +71,7 @@ namespace TrackMe.iOS
             Mvx.ConstructAndRegisterSingleton<IGeoCoderService, CachedGeoCoderService>();
             Mvx.ConstructAndRegisterSingleton<IShareService, ShareService>();
             Mvx.Resolve<ILocationService>().StartWatching();
+
         }
     }
 }

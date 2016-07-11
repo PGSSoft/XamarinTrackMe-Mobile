@@ -3,6 +3,7 @@ using UIKit;
 using MvvmCross.iOS.Platform;
 using MvvmCross.Core.ViewModels;
 using MvvmCross.Platform;
+using TrackMe.iOS.Services;
 
 namespace TrackMe.iOS
 {
@@ -21,18 +22,21 @@ namespace TrackMe.iOS
         // You have 17 seconds to return from this method, or iOS will terminate your application.
         //
         UIWindow _window;
+        private LocationTrackerService _locationTrackerService;
 
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             _window = new UIWindow(UIScreen.MainScreen.Bounds);
 
             
+            
             var setup = new Setup(this, _window);
             setup.Initialize();
            
             var startup = Mvx.Resolve<IMvxAppStart>();
             startup.Start();
-
+            _locationTrackerService = new LocationTrackerService();
+            _locationTrackerService.Subscribe();
             _window.MakeKeyAndVisible();
 
             return true;

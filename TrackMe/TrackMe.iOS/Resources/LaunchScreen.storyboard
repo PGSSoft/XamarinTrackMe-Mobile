@@ -15,12 +15,7 @@
                     <view key="view" contentMode="scaleToFill" id="yd7-JS-zBw">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <activityIndicatorView opaque="NO" contentMode="center" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="61" fixedFrame="YES">
-                                <rect key="frame" x="150" y="274" width="37" height="37"/>
-                                <color key="color" colorSpace="calibratedRGB" red="1" green="0.3411764705882353" blue="0.13333333333333333" alpha="1"/>
-                            </activityIndicatorView>
-                        </subviews>
+                        <subviews/>
                         <color key="backgroundColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
                     </view>
                     <connections/>

@@ -1,7 +1,10 @@
 ﻿using System;
+using System.Net;
+using SystemConfiguration;
 using CoreLocation;
 using TrackMe.Core.Services.Interfaces;
 using UIKit;
+using Reachability;
 
 namespace TrackMe.iOS.Services
 {
@@ -55,7 +58,10 @@ namespace TrackMe.iOS.Services
 
         public bool IsInternetAvailable()
         {
-            return true;
+            NetworkReachabilityFlags networkStatus;
+            bool test= Reachability.Net.XamarinIOS.Reachability.IsAdHocWiFiNetworkAvailable(out networkStatus);
+            return test;
+            
         }
     }
 }
