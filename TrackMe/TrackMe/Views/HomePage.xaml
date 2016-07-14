@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<views:BaseContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:TrackMe.Views;assembly=TrackMe"
+             xmlns:controls="clr-namespace:TrackMe.Controls;assembly=TrackMe"
+             xmlns:converters="clr-namespace:TrackMe.Infrastructure.Converters;assembly=TrackMe"
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             x:Class="TrackMe.Views.HomePage"
+             x:Name="Page"
+             Padding="15,0,15,0"
+             BackgroundColor="{StaticResource BackgroundColor}">
+  <views:BaseContentPage.Resources>
+    <ResourceDictionary>
+    </ResourceDictionary>
+  </views:BaseContentPage.Resources>
+  <StackLayout Orientation="Vertical">
+    <StackLayout.Padding>
+      <OnPlatform x:TypeArguments="Thickness">
+        <OnPlatform.iOS>
+          0,20,0,0
+        </OnPlatform.iOS>
+      </OnPlatform>
+    </StackLayout.Padding>
+    <Grid RowSpacing="0" VerticalOptions="FillAndExpand" x:Name="mapGrid" >
+      <Grid.RowDefinitions>
+        <RowDefinition Height="35"></RowDefinition>
+        <RowDefinition Height="*"></RowDefinition>
+        <RowDefinition Height="Auto"></RowDefinition>
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*" />
+      </Grid.ColumnDefinitions>
+      <Grid Grid.Row="0" BackgroundColor="{StaticResource PrimaryColor}" >
+        <Grid>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="3*"></ColumnDefinition>
+          <ColumnDefinition Width="2*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Image Grid.Column="0" x:Name="image" Source="logo_TrackMyLocation.png" HorizontalOptions="Start"/>
+          <StackLayout Grid.Column="1" Padding="2" Orientation="Horizontal" HorizontalOptions="End">
+            <Label Text="NET" FontSize="9" VerticalOptions="Center" TextColor="{Binding IsInternetEnabled, Converter={StaticResource InternetStatusToColorConverter}}"  />
+            <Image HeightRequest="25" WidthRequest="25" VerticalOptions="Center" HorizontalOptions="Center" Source="{Binding IsInternetEnabled, Converter={StaticResource InternetStatusToImageFormsConverter}}"/>
+            <Label Text="GPS" FontSize="9" VerticalOptions="Center" TextColor="{Binding GpsStatus, Converter={StaticResource GpsStatusToColorConverter}}"  />
+            <Image HeightRequest="30" WidthRequest="30" VerticalOptions="Center" Source="{Binding GpsStatus, Converter={StaticResource GpsStatusToImageFormsConverter}}"/>
+          </StackLayout>
+        </Grid>
+      </Grid>
+      <Grid Grid.Row="1">
+        <ActivityIndicator IsVisible="{Binding Address, Converter={StaticResource NotStringEmptyOrNullConverter}}"
+                             IsRunning="{Binding Address, Converter={StaticResource NotStringEmptyOrNullConverter}}"
+                             IsEnabled="{Binding Address, Converter={StaticResource NotStringEmptyOrNullConverter}}"
+                             Color="{StaticResource PrimaryColor}"  />
+        <controls:ExtendedMap x:Name="MyMap" IsShowingUser="True" />
+      </Grid>
+      <Grid Grid.Row="2">
+        <StackLayout Orientation="Horizontal">
+          <Button Text="{Binding StopSharing}" Command="{Binding StopTrackingCommand}" HorizontalOptions="FillAndExpand" VerticalOptions="Center"
+                  IsVisible="{Binding IsTracking}" IsEnabled="{Binding isTracking}"></Button>
+          <ActivityIndicator IsVisible="{Binding IsBusy}"  IsRunning="{Binding IsBusy}" Color="{StaticResource PrimaryColor}" IsEnabled="{Binding IsBusy}"  />
+          <Button Text="{Binding ShareString}" IsEnabled="{Binding ConnectionsStatus}" Command="{Binding ShareCommand}" Clicked="Button_OnClicked" HorizontalOptions="FillAndExpand" VerticalOptions="Center"/>
+        </StackLayout>
+      </Grid>
+    </Grid>
+  </StackLayout>
+</views:BaseContentPage>
