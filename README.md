@@ -1,3 +1,2 @@
 # TrackMe-Mobile
-
-Example 
+Track My Location WHAT: a simple one-click app to share your location: on-line, in a real time, active for 4 hours HOW: generate a link in your mobile app, share info of your current location with anyone you want via: e-mail, sms, Facebook, NFC, Messenger, communicators or any other way. You can stop sharing your location and create a new link a… https://www.microsoft.com/en-us/store/apps/track-my-location/9nblggh5fx1j 
